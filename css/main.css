@@ -1,0 +1,402 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic|Crimson+Text:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+
+/**********************
+*********BASE**********
+**********************/
+
+body {
+	background-color: #fcfcfc;
+	background-image: url("../img/bg_grey.png");
+	background-position: -25% -120px;
+	background-repeat: no-repeat;
+	color: #292929;
+	font-family: 'Lato', 'Arial', sans-serif;
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+	color: #e22;
+	text-decoration: none;
+	-webkit-transition: .2s;
+			transition: .2s;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.clear:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.v-center {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    	transform: translateY(-50%);
+}
+
+/**********************
+******TYPOGRAPHY*******
+**********************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+blockqoute {
+	font-family: 'Crimson Text', serif;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 3em;
+}
+
+h2
+h3,
+h4,
+h5,
+h6,
+p {
+	line-height: 1.6em;
+}
+
+p {
+	font-size: 1.2em;
+	margin-bottom: 2em;
+}
+
+blockqoute {
+	display: block;
+	background-color: #292929;
+	border-radius: 5px;
+	border-left: 5px solid #e22;
+	color: #f3f3f3;
+	font-size: 1.8em;
+	line-height: 2em;
+	margin: 30px 0;
+	padding: 30px;
+	text-align: center;
+}
+
+.brand-name {
+	color: #fafafa;
+	float: left;
+	font-size: 2em;
+	letter-spacing: 3px;
+	line-height: 1.6em;
+	padding-top: 14px;
+	margin-left: 25px;
+}
+
+.signature {
+	font-size: 4em;
+	font-family: 'Satisfy', cursive;
+	line-height: 2em;
+}
+
+/**********************
+********IMAGES*********
+**********************/
+
+.logo {
+	display: block;
+	float: left;
+	margin: auto;
+	width: 85px;
+}
+
+
+/**********************
+**STRUCTURAL ELEMENTS**
+**********************/
+
+.container960 {
+	width: 960px;
+	margin: auto;
+}
+
+.header,
+.footer {
+	min-width: 960px;
+	background-color: #292929;
+}
+
+.header {
+	padding: 15px 25px;
+}
+
+.main-content {
+	padding-bottom: 75px;
+}
+
+.footer {
+	padding: 15px;
+	color: #fafafa;
+	text-align: center;
+}
+
+.branding {
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/**********************
+******NAVIGATION*******
+**********************/
+
+.nav-list {
+	float: right;
+	font-family: 'Crimson Text', serif;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+
+.nav-list > li {
+	display: inline-block;
+	list-style-type: none;
+}
+
+.nav-list > li a {
+	color: #fafafa;
+	font-size: 1.8em;
+	margin: 25px;
+}
+
+.nav-list > li a:hover {
+	color: #e22;
+	text-decoration: none;
+}
+
+
+/**********************
+*****FEATURE SLIDER****
+**********************/
+
+.slider-container {
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider {
+	position: relative;
+}
+
+.slide {
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+
+.slide > img {
+	display: block;
+}
+
+.slider-navigation {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: #292929;
+	background-color: rgba(41, 41, 41, .6);
+	text-align: center;
+	color: #fafafa;
+	z-index: 1;
+}
+
+.slider-navigation:hover {
+	color: #e22;
+	cursor: pointer;
+}
+
+.slider-navigation > span {
+	display: block;
+	font-size: 2em;
+}
+
+.slider-navigation-next {
+	right: 0;
+}
+
+/**********************
+*******SHOWCASE********
+**********************/
+
+.showcase {
+	width: 33%;
+	float: left;
+}
+
+.showcase-img {
+	height: 250px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	text-align: center;
+}
+
+.showcase-img img {
+	width: 80%;
+}
+
+.showcase-text {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	text-align: center;
+	padding: 20px;
+}
+
+/**********************
+********GALLERY********
+**********************/
+
+.gallery-item {
+	height: 250px;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.gallery-item:first-of-type {
+	margin: 0;
+}
+
+.case-img {
+	left: -15%;
+	float: left;
+	width: 70%;
+}
+
+.case-img-active {
+	left: 0;
+}
+
+.case-info {
+	float: right; 
+	height: 250px;
+	width: 29.9999%;
+	text-align: right;
+}
+
+.case-info > h2 {
+	color: #292929;
+	font-size: 2.5em;
+	margin-right: 50px;
+	position: relative;
+	top: 50%;
+	/* -webkit-transform: translateY(-50%);
+	transform: translateY(-50%); */
+}
+
+.gallery-img {
+	height: 200px;
+	width: 33.333%;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.gallery-img img {
+	width: 80%;
+}
+
+.gallery-img:hover {
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	box-shadow: 0px 12px 10px -8px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-img-modal {
+	position: absolute;
+	width: 100%;
+	background-color: #f3f3f3;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/**********************
+********CONTACT********
+**********************/
+
+label,
+input,
+textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	color: #333;
+}
+
+label {
+	font-size: 1.4em;
+}
+
+input,
+textarea {
+	-webkit-transition: all 0.50s ease-in-out;
+  	   -moz-transition: all 0.50s ease-in-out;
+  		-ms-transition: all 0.50s ease-in-out;
+  		 -o-transition: all 0.50s ease-in-out;
+	padding: 10px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	font-size: 1.6em;
+}
+
+input[type=submit] {
+	background-color: #6e6;
+	border: none;
+	color: #fafafa;
+	cursor: pointer;
+}
+
+input[type=submit]:disabled {
+	background-color: #eee;
+	border-color: #eee;
+	color: #bbb;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+	box-shadow: 0 0 5px rgba(178, 54, 54, 0.8);
+	border: 1px solid rgba(178, 34, 34, 0.8);
+}
+
+.mail-result {
+	border-radius: 5px;
+	text-align: center;
+	display: none;
+}
+
+.mail-result p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.success {
+	background-color: #dfd;
+	border: 2px solid #3c3;
+}
+
+.error {
+	background-color: #fdd;
+	border: 2px solid #c33;
+}
