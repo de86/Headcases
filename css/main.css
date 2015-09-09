@@ -91,11 +91,11 @@ blockqoute {
 
 .brand-name {
 	color: #fafafa;
+	display: inline-block;
 	float: left;
-	font-size: 2em;
+	font-size: 1.4em;
 	letter-spacing: 3px;
 	line-height: 1.6em;
-	padding-top: 14px;
 	margin-left: 25px;
 }
 
@@ -105,15 +105,28 @@ blockqoute {
 	line-height: 2em;
 }
 
+@media all and (min-width: 1000px) {
+	.brand-name {
+		padding-top: 14px;
+		font-size: 1.8em;
+	}
+}
+
 /**********************
 ********IMAGES*********
 **********************/
 
 .logo {
-	display: block;
+	display: inline-block;
 	float: left;
 	margin: auto;
-	width: 85px;
+	width: 50px;
+}
+
+@media all and (min-width: 1000px) {
+	.logo {
+		width: 85px;
+	}
 }
 
 
@@ -122,18 +135,17 @@ blockqoute {
 **********************/
 
 .container960 {
-	width: 960px;
-	margin: auto;
+	padding: 0 15px 50px 15px;
 }
 
 .header,
 .footer {
-	min-width: 960px;
 	background-color: #292929;
 }
 
 .header {
-	padding: 15px 25px;
+	padding: 15px 5px;
+	text-align: center;
 }
 
 .main-content {
@@ -147,9 +159,29 @@ blockqoute {
 }
 
 .branding {
-	float: left;
+	display:inline-block;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+@media all and (min-width: 1000px) {
+	.container960 {
+		padding: 0 0 50px 0;
+		width: 960px;
+		margin: auto;
+	}
+
+	.header,
+	.footer {
+		min-width: 960px;
+		padding: 15px 25px;
+	}
+
+	.branding {
+		display: block;
+		float: left;
+		margin: 0;
+	}
 }
 
 /**********************
@@ -157,9 +189,9 @@ blockqoute {
 **********************/
 
 .nav-list {
-	float: right;
+	display: inline-block;
 	font-family: 'Crimson Text', serif;
-	padding-top: 25px;
+	padding-top: 15px;
 	text-transform: uppercase;
 }
 
@@ -170,8 +202,8 @@ blockqoute {
 
 .nav-list > li a {
 	color: #fafafa;
-	font-size: 1.8em;
-	margin: 25px;
+	font-size: 1.4em;
+	margin: 15px;
 }
 
 .nav-list > li a:hover {
@@ -179,59 +211,16 @@ blockqoute {
 	text-decoration: none;
 }
 
+@media all and (min-width: 1000px) {
+	.nav-list {
+		float: right;
+		padding-top: 25px;
+	}
 
-/**********************
-*****FEATURE SLIDER****
-**********************/
-
-.slider-container {
-	position: relative;
-	margin: auto;
-	overflow: hidden;
-}
-
-.slider {
-	position: relative;
-}
-
-.slide {
-	display: block;
-	float: left;
-	overflow: hidden;
-}
-
-.slide > img {
-	display: block;
-}
-
-.slider-navigation {
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	    -ms-transform: translateY(-50%);
-	    	transform: translateY(-50%);
-	width: 50px;
-	height: 50px;
-	border-radius: 100%;
-	background-color: #292929;
-	background-color: rgba(41, 41, 41, .6);
-	text-align: center;
-	color: #fafafa;
-	z-index: 1;
-}
-
-.slider-navigation:hover {
-	color: #e22;
-	cursor: pointer;
-}
-
-.slider-navigation > span {
-	display: block;
-	font-size: 2em;
-}
-
-.slider-navigation-next {
-	right: 0;
+	.nav-list > li a {
+		font-size: 1.8em;
+		margin: 25px;
+	}
 }
 
 /**********************
@@ -244,7 +233,8 @@ blockqoute {
 }
 
 .showcase-img {
-	height: 250px;
+	height: 125px;
+	padding: 25px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	text-align: center;
@@ -259,6 +249,13 @@ blockqoute {
 	border-bottom-right-radius: 3px;
 	text-align: center;
 	padding: 20px;
+}
+
+@media all and (min-width: 1000px) {
+	.showcase-img {
+		height: 250px;
+		padding: 0;
+	}
 }
 
 /**********************

@@ -6,20 +6,23 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/featherlight.css">
+	<link rel="stylesheet" href="css/slippry.css">
 	<script rel="javascript" src="js/modernizr.js"></script>
 </head>
 
 <body>
 	<!--Begin Header-->
 	<div class="header clear"> 
-		<div class="branding">
+		<div class="branding clear">
 			<img class="logo" src="img/logo.png" alt="Headcases Logo">
 			<h2 class="brand-name">Headcases Design</h2>
 		</div>
-		<ul class="nav-list">
-			<li class="list-item"><a href="index.php">Home</a></li>
-			<li class="list-item"><a href="gallery.php">Gallery</a></li>
-			<li class="list-item"><a href="contact.php">Contact</a></li>
-		</ul>
+		<div class="navigation">
+			<ul class="nav-list">
+				<li class="list-item"><a href="index.php">Home</a></li>
+				<li class="list-item"><a href="gallery.php">Gallery</a></li>
+				<li class="list-item"><a href="contact.php">Contact</a></li>
+			</ul>
+		</div>
 	</div>
 	<!--End Header-->

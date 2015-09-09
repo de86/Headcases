@@ -1,33 +1,32 @@
 $(document).ready(function(){
 
-	// Vars
-	var sliderWidth = 960;
-	var transitionTime = 800;
-	var slideIntervalTime = 4000;
-
-	var sliderInterval;
-
-
 	// jQuery Vars
 	var $sliderContainer = $(".slider-container");
 	var $slider = $(".slider");
 	var $slide = $(".slide");
 	var numSlides = $(".slide").length;
+	
+	// Vars
+	var initialSliderWidth = 960;
+	var transitionTime = 800;
+	var slideIntervalTime = 4000;
 
-
-	// Set slider elements widths
-	$sliderContainer.css({width: sliderWidth});
-	$slider.css({width: numSlides * sliderWidth});
-	$slide.css({width: sliderWidth});
-	$(".slide > img").css({width: sliderWidth});
-
+	var sliderInterval;
 
 	// Set initial slider position
 	$slider.prepend($(".slide:last-child"));
-	$slider.css({left: -sliderWidth});
+	$slider.css({left: -$sliderContainer.width()});
 
+	// Set slider elements widths
+	function setWidths(){
+		$sliderContainer.css({maxWidth: initialSliderWidth});
+		$slider.css({width: numSlides * ($sliderContainer.width())});
+		$slide.css({width: ($sliderContainer.width())});
+		$(".slide > img").css({width: ($sliderContainer.width())});
+	}
 
 	// Start Slider
+	setWidths();
 	startSlider();
 
 
@@ -52,8 +51,8 @@ $(document).ready(function(){
 
 	// Move slider images to the left
 	function slideLeft(){
-		$slider.animate({left: "-=" + sliderWidth}, transitionTime, function(){
-			$slider.css({left: -sliderWidth});
+		$slider.animate({left: "-=" + $sliderContainer.width()}, transitionTime, function(){
+			$slider.css({left: -$sliderContainer.width()});
 			$slider.append($(".slide:first-child"));
 		});
 	};
@@ -61,9 +60,9 @@ $(document).ready(function(){
 
 	// Move slider images to the right
 	function slideRight(){
-		$slider.animate({left: "+=" + sliderWidth}, transitionTime, function(){
+		$slider.animate({left: "+=" + $sliderContainer.width()}, transitionTime, function(){
 			$slider.prepend($(".slide:last-child"));
-			$slider.css({left: -sliderWidth});
+			$slider.css({left: -$sliderContainer.width()});
 		});
 	};
 
@@ -75,4 +74,8 @@ $(document).ready(function(){
 		slideRight();	
 	});
 
+	// Resize Slider for responsiveness
+	$(window).resize(function(){
+		setWidths();
+	});
 });

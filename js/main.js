@@ -8,6 +8,7 @@ $(document).ready(function(){
 	var fadeInterval = 500;
 	var numSlides = $featureImages.length;
 	
+	
 	$showcase.hover(
 		function() {
 			$(this).children(".showcase-img").css({
@@ -43,14 +44,12 @@ $(document).ready(function(){
 				"background-color": "#f3f3f3",
 				"box-shadow": "0px 12px 10px -8px rgba(0, 0, 0, 0.5)"				
 			}).children(".case-img").animate({left: "0"}, 150);
-			//$(this).children("img").attr("src", "img/custom_cue_case_open_pingu.png");
 		},
 		function(){
 			$(this).css({
 				"background-color": "transparent",
 				"box-shadow": "none"
 			}).children(".case-img").animate({left: "-15%"}, 150);
-			//$(this).children("img").attr("src", "img/custom_cue_case_pingu.png");
 		}
 	);
 
@@ -61,18 +60,4 @@ $(document).ready(function(){
 		function(){
 			$(this).children("img").css({width: "80%"});
 		});
-
-	//TODO Sort out simple slider
-	/*function startSlide(){
-		var runSlider = true;
-		var currentSlide = 0;
-
-		while (runSlider){
-			$featureImages[currentSlide].delay(sliderInterval).fadeOut(fadeInterval).addClass("hidden");
-			currentSlide++;
-		};
-	};
-
-	startSlide();*/
-
 });
